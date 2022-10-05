@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "507123618012",
-    "firebase_url": "https://l-ikun-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "l-ikun",
-    "storage_bucket": "l-ikun.appspot.com"
+    "project_number": "1076703087212",
+    "project_id": "flutter-demo-6db66",
+    "storage_bucket": "flutter-demo-6db66.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:507123618012:android:f9ac50c684b2c73bdf6419",
+        "mobilesdk_app_id": "1:1076703087212:android:7c50ba04db8392b622a649",
         "android_client_info": {
           "package_name": "com.example.flutter_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "507123618012-u0442e90ls3j07vdrrlph5lmsnel5fbm.apps.googleusercontent.com",
+          "client_id": "1076703087212-tbupsnda4rkupkjt8c956obkgpssc9s3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfskQ0MK1lnI2boRq___9MiRykbGYj9p4"
+          "current_key": "AIzaSyD57kgCIjzMuRuDF7xLwsRYESPE8kWdq_k"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "507123618012-u0442e90ls3j07vdrrlph5lmsnel5fbm.apps.googleusercontent.com",
+              "client_id": "1076703087212-tbupsnda4rkupkjt8c956obkgpssc9s3.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "507123618012-sh4j01u7b1h12kutqkm4egdph2arri6o.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.flutterProject"
-              }
             }
           ]
         }

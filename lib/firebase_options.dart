@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,23 +43,41 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCjtr0OVhwMQUsh06MqwstLGGyIKLeF0c8',
+    appId: '1:1076703087212:web:d889ef109313c8ab22a649',
+    messagingSenderId: '1076703087212',
+    projectId: 'flutter-demo-6db66',
+    authDomain: 'flutter-demo-6db66.firebaseapp.com',
+    storageBucket: 'flutter-demo-6db66.appspot.com',
+    measurementId: 'G-92NZSHNR2Y',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAfskQ0MK1lnI2boRq___9MiRykbGYj9p4',
-    appId: '1:507123618012:android:f9ac50c684b2c73bdf6419',
-    messagingSenderId: '507123618012',
-    projectId: 'l-ikun',
-    databaseURL: 'https://l-ikun-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'l-ikun.appspot.com',
+    apiKey: 'AIzaSyD57kgCIjzMuRuDF7xLwsRYESPE8kWdq_k',
+    appId: '1:1076703087212:android:7c50ba04db8392b622a649',
+    messagingSenderId: '1076703087212',
+    projectId: 'flutter-demo-6db66',
+    storageBucket: 'flutter-demo-6db66.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCIVGEypwp_jt3gVBy_AUdKF4dyK7S2ndg',
-    appId: '1:507123618012:ios:f9902894e2d7f6f6df6419',
-    messagingSenderId: '507123618012',
-    projectId: 'l-ikun',
-    databaseURL: 'https://l-ikun-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'l-ikun.appspot.com',
-    iosClientId: '507123618012-sh4j01u7b1h12kutqkm4egdph2arri6o.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAnoY5fnOTTktrPmzhaY1k3qg1vF8NDEvk',
+    appId: '1:1076703087212:ios:f769ac3b1eeba43022a649',
+    messagingSenderId: '1076703087212',
+    projectId: 'flutter-demo-6db66',
+    storageBucket: 'flutter-demo-6db66.appspot.com',
+    iosClientId: '1076703087212-ahoa5k19l9ts1qmo9gddtmnd75ndg9ma.apps.googleusercontent.com',
+    iosBundleId: 'com.example.flutterProject',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAnoY5fnOTTktrPmzhaY1k3qg1vF8NDEvk',
+    appId: '1:1076703087212:ios:f769ac3b1eeba43022a649',
+    messagingSenderId: '1076703087212',
+    projectId: 'flutter-demo-6db66',
+    storageBucket: 'flutter-demo-6db66.appspot.com',
+    iosClientId: '1076703087212-ahoa5k19l9ts1qmo9gddtmnd75ndg9ma.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterProject',
   );
 }
