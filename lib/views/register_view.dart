@@ -12,7 +12,6 @@ class RegisterView extends StatefulWidget {
 }
 
 class _RegisterViewState extends State<RegisterView> {
-
   late final TextEditingController _email;
   late final TextEditingController _password;
   @override
@@ -28,6 +27,7 @@ class _RegisterViewState extends State<RegisterView> {
     _password.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,18 +64,18 @@ class _RegisterViewState extends State<RegisterView> {
                     onPressed: () async {
                       final email = _email.text;
                       final password = _password.text;
-                      try{
-                      final userCredential = await FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                        email: email,
-                        password: password,
-                      );
-                      print(userCredential);
-                    } on FirebaseAuthException catch (e){
-                      
-                    }
+                      print({email, password});
+                      try {
+                        final userCredential = await FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                        print(userCredential);
+                      } on FirebaseAuthException catch (e) {
+                        print({"Firebase error :": e.message});
+                      }
                     },
-          
                     child: const Text('Register'),
                   ),
                 ],
@@ -88,6 +88,4 @@ class _RegisterViewState extends State<RegisterView> {
       ),
     );
   }
-  }
-
-
+}
